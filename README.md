@@ -19,7 +19,7 @@ See the contents of `minimal.graphml`:
 <graphml 
     xmlns="http://graphml.graphdrawing.org/xmlns"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns graphml+netcanvas.xsd"
+    xsi:schemaLocation="http://schema.networkcanvas.com/xmlns http://schema.networkcanvas.com/xmlns/1.0/graphml+netcanvas.xsd"
     xmlns:nc="http://schema.networkcanvas.com/xmlns"
     nc:caseID="12345"
     nc:sessionUUID="9170f62f-4d06-4af9-8120-8dd7836e37f8"

@@ -9,7 +9,7 @@
 >
     <xs:import 
         namespace="http://schema.networkcanvas.com/xmlns"
-        schemaLocation="http://schema.networkcanvas.com/xmlns/1.0/nc-types.xsd" />
+        schemaLocation="http://schema.networkcanvas.com/xmlns/1.0/nc-attributes.xsd" />
 
     <xs:redefine schemaLocation="http://graphml.graphdrawing.org/xmlns/1.1/graphml.xsd">
         <xs:attributeGroup name="graphml.extra.attrib">
