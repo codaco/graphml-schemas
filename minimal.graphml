@@ -9,6 +9,8 @@
     nc:protocolUUID="9170f62f-4d06-4af9-8120-8dd7836e37f7"
 >
     <graph edgedefault="directed">
+        <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
+        <data key="ego_name">Jimbo</data>
         <node id="n0"/>
         <node id="n1" />
         <edge source="n0" target="n1"/>
