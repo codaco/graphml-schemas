@@ -10,6 +10,26 @@ Our extensions provide three namespaced attributes on the `<graphml>` element: `
 
 The schema `nc-types.xsd` defines these attributes, and `graphml+netcanvas.xsd` extends the element to include them.
 
+## Ego data
+
+Storing ego data is possible using the existing GraphML schema, although only in a general sense (artbitrary data can be attatched to the graph element). Existing parsers either ignore this data, or just show it correct as one or more child attributes of the graph element. Our parsers will treat all graph `<key>` and `<data>` nodes as describing ego.
+
+Specifically, ego data can be stored within GraphML just like we store node or edge data, except that instead of defining the element with a "for" attribute of either 'node' or 'edge', we can define them as for the graph:
+
+``` XML
+<key id="ego_attribute" attr.name="ego_attribute" attr.type="string" for="graph" />
+```
+
+We can then give this attribute a value anywhere inside the <graph> element:
+
+``` XML
+<graph>
+  <data key="ego_attribute">
+    Jimbo
+  </data>
+</graph>
+```
+
 ## Sample GraphML document
 
 See the contents of `minimal.graphml`:
@@ -26,6 +46,8 @@ See the contents of `minimal.graphml`:
     nc:protocolUUID="9170f62f-4d06-4af9-8120-8dd7836e37f7"
 >
     <graph edgedefault="directed">
+        <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
+        <data key="ego_name">Jimbo</data>
         <node id="n0"/>
         <node id="n1" />
         <edge source="n0" target="n1"/>
