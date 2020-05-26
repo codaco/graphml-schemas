@@ -34,30 +34,15 @@ We can then give this attribute a value anywhere inside the <graph> element:
 
 See the contents of `minimal.graphml`:
 
-``` XML
-<?xml version="1.0" encoding="UTF-8"?>
-<graphml 
-    xmlns="http://graphml.graphdrawing.org/xmlns"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://schema.networkcanvas.com/xmlns http://schema.networkcanvas.com/xmlns/1.0/graphml+netcanvas.xsd"
-    xmlns:nc="http://schema.networkcanvas.com/xmlns"
-    nc:caseID="Joshua"
-    nc:sessionUUID="1f1ac148-1e05-4bb3-9028-552451817da6"
-    nc:protocolName="Development protocol"
-    nc:remoteProtocolID="90f75deb780ad19072cb59eda59334730c21d6ec9e7e4edb4221aaf580cfe4ba"
-    nc:sessionStartTime="1590492533056"
-    nc:sessionFinishTime="1590492531832"
-    nc:sessionExportTime="1590492533822"
->
-    <graph edgedefault="directed">
-        <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
-        <data key="ego_name">Jimbo</data>
-        <node id="n0"/>
-        <node id="n1" />
-        <edge source="n0" target="n1"/>
-    </graph>
-</graphml>
-```
+## Multiple networks in one file
+
+The 'correct' way to approach this problem would be to have multiple `<graph>` objects. See the example in `minimal-multiple-networks.graphml` for an implementation of this.
+
+One key illustration of the elegance of this approach is that ego data can still be modelled by specifying attributes at the graph level, which makes semantic sense.
+
+Unfortunately, testing in Gephi, networkX, iGraph, visone, and yEd indicates that no currently available software correctly handles this feature of the graphML language. If you find one that does, please let us know.
+
+Because of this, merged network export will be deferred for now. It can still be accomplished using the entity resolution mode of Server.
 
 ## Validating a file against this schema
 
