@@ -10,12 +10,9 @@
       </xs:restriction>
     </xs:simpleType>
   </xs:attribute>
-  <xs:attribute name="protocolUUID">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:length value="36" fixed="true" />
-        <xs:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[8-9a-bA-B][0-9a-fA-F]{3}-[0-9a-fA-F]{12}" />
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:attribute>
+  <xs:attribute name="protocolName" type="xs:string" />
+  <xs:attribute name="remoteProtocolID" type="xs:string" />
+  <xs:attribute name="sessionStartTime" type="xs:dateTime" />\
+  <xs:attribute name="sessionFinishTime" type="xs:dateTime" />
+  <xs:attribute name="sessionExportTime" type="xs:dateTime" />
 </xs:schema>

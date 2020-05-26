@@ -41,9 +41,13 @@ See the contents of `minimal.graphml`:
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://schema.networkcanvas.com/xmlns http://schema.networkcanvas.com/xmlns/1.0/graphml+netcanvas.xsd"
     xmlns:nc="http://schema.networkcanvas.com/xmlns"
-    nc:caseID="12345"
-    nc:sessionUUID="9170f62f-4d06-4af9-8120-8dd7836e37f8"
-    nc:protocolUUID="9170f62f-4d06-4af9-8120-8dd7836e37f7"
+    nc:caseID="Joshua"
+    nc:sessionUUID="1f1ac148-1e05-4bb3-9028-552451817da6"
+    nc:protocolName="Development protocol"
+    nc:remoteProtocolID="90f75deb780ad19072cb59eda59334730c21d6ec9e7e4edb4221aaf580cfe4ba"
+    nc:sessionStartTime="1590492533056"
+    nc:sessionFinishTime="1590492531832"
+    nc:sessionExportTime="1590492533822"
 >
     <graph edgedefault="directed">
         <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
