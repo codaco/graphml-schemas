@@ -12,11 +12,12 @@
     nc:sessionFinishTime="2020-05-26T15:04:29.678Z"
     nc:sessionExportTime="2020-05-26T15:04:32.030Z"
 >
+    <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
     <graph edgedefault="directed">
-        <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
         <data key="ego_name">Jimbo</data>
         <node id="n0"/>
         <node id="n1" />
         <edge source="n0" target="n1"/>
     </graph>
+
 </graphml>
