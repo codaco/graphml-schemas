@@ -9,12 +9,12 @@
 >
     <xs:import 
         namespace="http://schema.networkcanvas.com/xmlns"
-        schemaLocation="http://schema.networkcanvas.com/xmlns/1.0/nc-attributes.xsd" />
+        schemaLocation="nc-attributes.xsd" />
 
-    <xs:redefine schemaLocation="http://graphml.graphdrawing.org/xmlns/1.1/graphml.xsd">
+    <xs:redefine schemaLocation="graphml.xsd">
         <xs:attributeGroup name="graphml.extra.attrib">
             <xs:attributeGroup ref="graphml.extra.attrib"/>
-            <xs:attribute ref="nc:caseID" use="required"/>
+            <xs:attribute ref="nc:caseId" use="required"/>
             <xs:attribute ref="nc:sessionUUID" use="required"/>
             <xs:attribute ref="nc:protocolName"/>
             <xs:attribute ref="nc:remoteProtocolID" use="required"/>
