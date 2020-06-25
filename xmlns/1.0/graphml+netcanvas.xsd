@@ -12,15 +12,15 @@
         schemaLocation="nc-attributes.xsd" />
 
     <xs:redefine schemaLocation="graphml.xsd">
-        <xs:attributeGroup name="graphml.extra.attrib">
-            <xs:attributeGroup ref="graphml.extra.attrib"/>
+        <xs:attributeGroup name="graph.extra.attrib">
+            <xs:attributeGroup ref="graph.extra.attrib"/>
             <xs:attribute ref="nc:caseId" use="required"/>
             <xs:attribute ref="nc:sessionUUID" use="required"/>
             <xs:attribute ref="nc:protocolName"/>
             <xs:attribute ref="nc:remoteProtocolID" use="required"/>
             <xs:attribute ref="nc:sessionStartTime"/>
             <xs:attribute ref="nc:sessionFinishTime"/>
-            <xs:attribute ref="nc:sessionExportTime"/>
+            <xs:attribute ref="nc:sessionExportTime" use="required"/>
         </xs:attributeGroup>
     </xs:redefine>
 </xs:schema>

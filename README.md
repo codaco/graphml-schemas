@@ -6,13 +6,15 @@ A key aim of this process has been to ensure interoperability with existing Grap
 
 ## Schema extensions
 
-Our extensions provide three namespaced attributes on the `<graphml>` element: `nc:caseID`, `nc:protocolUUID`, and `nc:sessionUUID`.
+Our extensions provide namespaced attributes on the `<graph>` element: `nc:caseId`, `nc:sessionUUID`, `nc:protocolName`, `nc:remoteProtocolID`, `nc:sessionExportTime`, `nc:sessionStartTime`,  and `nc:sessionFinishTime`.
 
 The schema `nc-types.xsd` defines these attributes, and `graphml+netcanvas.xsd` extends the element to include them.
 
+These data contain network canvas metadata for sessions needed for importing into Server.
+
 ## Ego data
 
-Storing ego data is possible using the existing GraphML schema, although only in a general sense (artbitrary data can be attatched to the graph element). Existing parsers either ignore this data, or just show it (correctly) as one or more attributes of the graph itself. Our parsers will treat all graph `<key>` and `<data>` nodes as describing ego.
+Storing ego data is possible using the existing GraphML schema, although only in a general sense (arbitrary data can be attached to the graph element). Existing parsers either ignore this data, or just show it (correctly) as one or more attributes of the graph itself. Our parsers will treat all graph `<key>` and `<data>` nodes as describing ego.
 
 Specifically, ego data can be stored within GraphML just like we store node or edge data, except that instead of defining the element with a "for" attribute of either 'node' or 'edge', we can define them as for the graph:
 
@@ -26,9 +28,7 @@ We can then give this attribute a value anywhere inside the `<graph>` element:
 
 ``` XML
 <graph>
-  <data key="ego_attribute">
-    Jimbo
-  </data>
+  <data key="ego_attribute">Jimbo</data>
 </graph>
 ```
 
@@ -38,11 +38,11 @@ See the contents of `minimal.graphml`:
 
 ## Multiple networks in one file
 
-The 'correct' way to approach this problem would be to have multiple `<graph>` nodes, with each representing an ego network. Node, Edge, and Ego attribute definitions would share `<key>`s, with the definitions within each graph. See the example in `minimal-multiple-networks.graphml` for an implementation of this.
+The most compatible way to approach this problem is to have multiple `<graph>` nodes, with each representing an ego network. Node, Edge, and Ego attribute definitions would share `<key>`s, with the definitions within each graph. See the example in `minimal-multiple-networks.graphml` for an implementation of this.
 
 Unfortunately, testing in Gephi, networkX, iGraph, visone, and yEd indicates that no currently available software correctly handles this feature of the graphML language. If you find one that does, please let us know.
 
-Because of this, merged network export will be deferred for now. It can still be accomplished using the entity resolution mode of Server.
+If you are a developer who wants to correctly implement our multiple network format, please get in touch!
 
 ## Validating a file against this schema
 

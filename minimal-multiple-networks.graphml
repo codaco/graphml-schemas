@@ -4,25 +4,45 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://schema.networkcanvas.com/xmlns http://schema.networkcanvas.com/xmlns/1.0/graphml+netcanvas.xsd"
     xmlns:nc="http://schema.networkcanvas.com/xmlns"
-    nc:caseID="Joshua"
-    nc:sessionUUID="1f1ac148-1e05-4bb3-9028-552451817da6"
-    nc:protocolName="Development protocol"
-    nc:remoteProtocolID="90f75deb780ad19072cb59eda59334730c21d6ec9e7e4edb4221aaf580cfe4ba"
-    nc:sessionStartTime="2020-05-26T15:04:28.706Z"
-    nc:sessionFinishTime="2020-05-26T15:04:29.678Z"
-    nc:sessionExportTime="2020-05-26T15:04:32.030Z"
 >
     <key id="ego_name" attr.name="ego_name" attr.type="string" for="graph" />
-    <graph edgedefault="directed" id="sessionID1">
+    <key id="alter_name" attr.name="alter_name" attr.type="string" for="node" />
+	<graph
+		edgedefault="undirected"
+		nc:caseId="Case ID"
+		nc:sessionUUID="c748d9de-4fe6-4fcf-80c6-9cde8068d22c"
+		nc:protocolName="Development"
+		nc:remoteProtocolID="21b6a798321a49f75b9c3827fa3cfdb7efe2c4e05c3d13aefe1c825b9774a158"
+		nc:sessionExportTime="2020-06-23T21:02:52.718Z"
+		nc:sessionStartTime="2020-06-18T09:53:01.565Z"
+		nc:sessionFinishTime="2020-06-19T13:16:18.713Z"
+	>
         <data key="ego_name">Jimbo</data>
-        <node id="n0"/>
-        <node id="n1" />
+        <node id="n0">
+            <data key="alter_name">Joshua</data>
+        </node>
+        <node id="n1">
+            <data key="alter_name">Michael</data>
+        </node>
         <edge source="n0" target="n1"/>
     </graph>
-    <graph edgedefault="directed" id="sessionID2">
-        <data key="ego_name">Joshua</data>
-        <node id="n3"/>
-        <node id="n4" />
-        <edge source="n3" target="n4"/>
+    <graph
+		edgedefault="undirected"
+		nc:caseId="Case ID 2"
+		nc:sessionUUID="g2398d9de-4fe6-4fcf-80c6-9cde8068d22c"
+		nc:protocolName="Development"
+		nc:remoteProtocolID="21b6a798321a49f75b9c3827fa3cfdb7efe2c4e05c3d13aefe1c825b9774a158"
+		nc:sessionExportTime="2020-06-23T21:02:52.718Z"
+		nc:sessionStartTime="2020-03-18T09:53:01.565Z"
+		nc:sessionFinishTime="2020-03-19T13:16:18.713Z"
+	>
+        <data key="ego_name">Sophie</data>
+        <node id="n0">
+            <data key="alter_name">Sarah</data>
+        </node>
+        <node id="n1">
+            <data key="alter_name">Michelle</data>
+        </node>
+        <edge source="n0" target="n1"/>
     </graph>
 </graphml>
