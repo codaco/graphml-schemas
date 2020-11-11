@@ -11,6 +11,7 @@
     </xs:simpleType>
   </xs:attribute>
   <xs:attribute name="protocolName" type="xs:string" />
+  <xs:attribute name="codebookHash" type="xs:string" />
   <xs:attribute name="remoteProtocolID" type="xs:string" />
   <xs:attribute name="sessionStartTime" type="xs:dateTime" />
   <xs:attribute name="sessionFinishTime" type="xs:dateTime" />

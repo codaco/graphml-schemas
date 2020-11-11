@@ -20,6 +20,7 @@
             <xs:attribute ref="nc:remoteProtocolID" use="required"/>
             <xs:attribute ref="nc:sessionStartTime"/>
             <xs:attribute ref="nc:sessionFinishTime"/>
+            <xs:attribute ref="nc:codebookHash" use="required"/>
             <xs:attribute ref="nc:sessionExportTime" use="required"/>
         </xs:attributeGroup>
     </xs:redefine>
