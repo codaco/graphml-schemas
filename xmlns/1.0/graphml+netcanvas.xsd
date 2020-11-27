@@ -17,7 +17,7 @@
             <xs:attribute ref="nc:caseId" use="required"/>
             <xs:attribute ref="nc:sessionUUID" use="required"/>
             <xs:attribute ref="nc:protocolName"/>
-            <xs:attribute ref="nc:remoteProtocolID" use="required"/>
+            <xs:attribute ref="nc:protocolUID" use="required"/>
             <xs:attribute ref="nc:sessionStartTime"/>
             <xs:attribute ref="nc:sessionFinishTime"/>
             <xs:attribute ref="nc:codebookHash" use="required"/>

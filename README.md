@@ -6,7 +6,7 @@ A key aim of this process has been to ensure interoperability with existing Grap
 
 ## Schema extensions
 
-Our extensions provide namespaced attributes on the `<graph>` element: `nc:caseId`, `nc:sessionUUID`, `nc:protocolName`, `nc:remoteProtocolID`, `nc:sessionExportTime`, `nc:sessionStartTime`,  and `nc:sessionFinishTime`.
+Our extensions provide namespaced attributes on the `<graph>` element: `nc:caseId`, `nc:sessionUUID`, `nc:protocolName`, `nc:protocolUID`, `nc:sessionExportTime`, `nc:sessionStartTime`,  and `nc:sessionFinishTime`.
 
 The schema `nc-types.xsd` defines these attributes, and `graphml+netcanvas.xsd` extends the element to include them.
 
